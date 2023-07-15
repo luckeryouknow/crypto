@@ -12,7 +12,6 @@ export default function PopularCrypto () {
   };
 
   const { data, isLoading, isError } = useQuery(["coins"], getData);
-  console.log(data);
 
   const contentHandler = () => {
     if (isLoading) {
