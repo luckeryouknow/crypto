@@ -1,0 +1,59 @@
+.popularCrypto {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  height: 21rem;
+  max-width: 80rem;
+  margin: 3rem auto 0;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.image {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1rem;
+}
+
+.coinCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.price {
+  margin: 0;
+}
+
+.green {
+  color: #0ecb81;
+}
+
+.red {
+  color: red;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    display: grid;
+    height: auto;
+    grid-row-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}

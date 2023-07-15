@@ -3,13 +3,43 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Market from './pages/Market/Market';
+import ChooseUs from './pages/ChooseUs/ChooseUs';
+import Join from './pages/Join/Join';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const queryClient = new QueryClient();
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/pages/market",
+    element: <Market />
+  },
+  {
+    path: "/pages/chooseus",
+    element: <ChooseUs />
+  },
+  {
+    path: "/pages/join",
+    element: <Join />
+  }
+])
+
 root.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>
 );
 

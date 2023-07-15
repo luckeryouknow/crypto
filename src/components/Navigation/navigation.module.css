@@ -1,0 +1,89 @@
+.navigation {
+  display: flex;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  align-items: center;
+  font-size: 1.75rem;
+  justify-content: space-between;
+}
+
+.logotype {
+  color: #f3f2f4;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.navigationButtons {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  font-weight: 700;
+}
+
+.button {
+  color: #f3f2f4;
+  transition: 0.5s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(25deg,#2600fc,#ff00ea);
+  color: transparent;
+}
+
+.adaptiveButton {
+  display: none;
+  font-size: 48px;
+}
+
+.adaptiveNavigation {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: #f3f2f4;
+  font-size: 3rem;
+  text-align: center;
+  transition: all .4s ease-in-out;
+  z-index: 1;
+}
+
+.adaptiveNavigationButton {
+  color: #0f051d;
+  text-decoration: none;
+  margin-top: 25px;
+}
+
+.closeButton {
+  position: absolute;
+  color: #0f051d;
+  top: 3rem;
+  right: 3rem;
+}
+
+@media (max-width: 900px) {
+  .navigationButtons {
+    display: none;
+  }
+
+  .adaptiveButton {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .adaptiveButton {
+    font-size: 35px;
+  }
+}
